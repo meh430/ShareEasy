@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+
 const iconStyle = {
     fontSize: "52px",
     color: "red",
@@ -38,13 +39,7 @@ export class UploadItem extends React.Component {
     }
 
     displayLink() {
-        if (this.props.running && this.props.downloadLink.length === 0) {
-            return (
-                <div className="progress">
-                    <div className="progress-bar" style={{ width: `${this.props.progress}%` }}></div>
-                </div>
-            );
-        } else if(!this.props.running && this.props.downloadLink.length != 0) {
+        if(!this.props.running && this.props.downloadLink.length != 0) {
             return <h3 className="fileName">{this.props.downloadLink}</h3>;
         }
     }
@@ -54,7 +49,7 @@ export class UploadItem extends React.Component {
             <div className="upItem">
                 <i className={this.displayMediaIcon().toString()} style={iconStyle}/>
                 <h3 className="fileName">{this.props.fileName.length === 0 ? "Please upload a file..." : this.props.fileName}</h3>
-                {this.displayLink()}    
+                {this.displayLink()} 
             </div>
         );
     }

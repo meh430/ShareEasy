@@ -8,6 +8,14 @@
     font-size: 56px;
 }
 
+.content {
+    display: flex;
+    flex-direction: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+}
+
 .sectionInfo {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
@@ -16,29 +24,33 @@
 }
 
 .section {
-    text-align: center;
-    display: inline-table;
-    vertical-align: text-top;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     border: solid 1px white;
     border-radius: 20px;
     padding: 15px;
     margin: 10px;
-    width: 45%;
+    width: 800px;
 }
 
 .upItem {
-    display: inline-table;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    word-break:break-all;
     border: solid 1px white;
     border-radius: 10px;
     padding: 15px;
     margin: 10px;
     width: 80%;
-    text-align: center;
 }
 
 .fileName {
     font-family: 'Open Sans', sans-serif;
     color: white;
+    word-wrap: break-word;
     font-size: 16px;
 }
 
@@ -46,7 +58,8 @@
     text-align: center;
     margin: 10px;
 	background-color:#3f7efc;
-	border-radius:12px;
+    border-radius:12px;
+    width: 90%;
 	display:block;
 	cursor:pointer;
 	color: white;
