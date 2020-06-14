@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import firebase from "../Firebase.js";
+import { UploadItem } from "./UploadItem";
 
 const storageRef = firebase.storage().ref();
 let uploadTask;
@@ -9,10 +10,11 @@ export class UploadComponent extends React.Component {
         super(props);
         this.uploadClicked = this.uploadClicked.bind(this);
         this.onFileSelected = this.onFileSelected.bind(this);
-        this.state = { fileName: "Please upload a file...", uploadRunning: false, progress: 0 };
+        this.state = { fileName: "", downloadLink: "", fileType: "", uploadRunning: false, progress: 0 };
     }
 
     uploadClicked(event) {
+        this.setState({ fileName: "", downloadLink: "", fileType: "", uploadRunning: false, progress: 0 })
         this.refs.fileUpload.click();
     }
 
@@ -24,6 +26,7 @@ export class UploadComponent extends React.Component {
             let fName = selectedFile["name"];
             fName = fName.replace(/\s/g, "");
             uploadTask = storageRef.child("uploads/" + fName).put(selectedFile);
+            this.setState({fileName: fName, fileType: selectedFile.type})
             uploadTask.on(
                 "state_changed",
                 (snapshot) => {
@@ -36,7 +39,11 @@ export class UploadComponent extends React.Component {
                 () => {
                     uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
                         console.log("File available at", downloadURL);
-                        this.setState({ progress: downloadURL, uploadRunning: false });
+                        this.setState({
+                            downloadLink: downloadURL,
+                            uploadRunning: false,
+                            progress: 100, fileName: fName, fileType: selectedFile.type
+                        });
                     });
                 }
             );
@@ -56,7 +63,7 @@ export class UploadComponent extends React.Component {
                     Upload a file to generate a download link that can easily be shared with others. Files that are
                     uploaded stay available to download for 24 hours.
                 </h3>
-                <a onClick={this.uploadClicked} className="uploadButton">
+                <a onClick={this.uploadClicked} className="uploadButton" style={{color:"white"}}>
                     Upload File
                 </a>
                 <input
@@ -67,8 +74,14 @@ export class UploadComponent extends React.Component {
                     onChange={this.onFileSelected}
                 />
 
-                <h4 className="fileName">{this.state.fileName}</h4>
-                <h4 className="fileName">{this.state.progress}</h4>
+                {this.state.fileName!=="" ? <UploadItem
+                    fileType={this.state.fileType}
+                    fileName={this.state.fileName}
+                    running={this.state.uploadRunning}
+                    expireTime="12 hrs"
+                    progress={this.state.progress}
+                    downloadLink={this.state.downloadLink}
+                /> : <i/>}
             </div>
         );
     }

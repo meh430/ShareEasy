@@ -16,12 +16,24 @@
 }
 
 .section {
+    text-align: center;
     display: inline-table;
+    vertical-align: text-top;
     border: solid 1px white;
     border-radius: 20px;
     padding: 15px;
     margin: 10px;
     width: 45%;
+}
+
+.upItem {
+    display: inline-table;
+    border: solid 1px white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    width: 80%;
+    text-align: center;
 }
 
 .fileName {
@@ -37,7 +49,7 @@
 	border-radius:12px;
 	display:block;
 	cursor:pointer;
-	color:#ffffff;
+	color: white;
     font-family: 'Open Sans', sans-serif;
 	font-size:22px;
 	padding:15px 18px;
