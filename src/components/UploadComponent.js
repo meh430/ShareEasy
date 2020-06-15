@@ -6,6 +6,7 @@ import { shortenReqHeaders } from "../Credentials";
 
 const storageRef = firebase.storage().ref();
 let uploadTask;
+
 export class UploadComponent extends React.Component {
     constructor(props) {
         super(props);
@@ -17,7 +18,7 @@ export class UploadComponent extends React.Component {
 
     displayProgress() {
         if (this.state.uploadRunning) {
-            return <progress value={this.state.progress} max="100" style={{ width: "90%" }} />;
+            return <progress value={this.state.progress} max="100" style={{ width: "80%" }} />;
         } else {
             return <i style={{ display: "none" }} />;
         }
@@ -49,7 +50,6 @@ export class UploadComponent extends React.Component {
                 },
                 () => {
                     uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
-                        console.log("File available at", downloadURL);
                         let shortenRequest = {
                             destination: downloadURL,
                         };

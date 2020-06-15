@@ -51,7 +51,19 @@
     font-family: 'Open Sans', sans-serif;
     color: white;
     word-wrap: break-word;
-    font-size: 16px;
+    font-size: 20px;
+}
+
+.dLink {
+    text-align: center;
+    color: black;
+    background-color: #a5bef0;
+    font-family: 'Open Sans', sans-serif;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    border: solid 2px #3e527a
 }
 
 .uploadButton {
