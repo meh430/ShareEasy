@@ -1,53 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            ::-webkit-scrollbar {
+                width: 2px;
+                height: 2px;
+            }
 
-<head>
-    <meta charset="utf-8" />
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+            ::-webkit-scrollbar-button {
+                width: 0px;
+                height: 0px;
+            }
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            ::-webkit-scrollbar-thumb {
+                background: #e1e1e1;
+                border: 0px none #ffffff;
+                border-radius: 50px;
+            }
 
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+            ::-webkit-scrollbar-thumb:hover {
+                background: #ffffff;
+            }
 
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+            ::-webkit-scrollbar-thumb:active {
+                background: #000000;
+            }
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+            ::-webkit-scrollbar-track {
+                background: #666666;
+                border: 0px none #ffffff;
+                border-radius: 50px;
+            }
+
+            ::-webkit-scrollbar-track:hover {
+                background: #666666;
+            }
+
+            ::-webkit-scrollbar-track:active {
+                background: #333333;
+            }
+
+            ::-webkit-scrollbar-corner {
+                background: transparent;
+            }
+        </style>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-storage.js"></script>
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Easily share files by generating download links" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+        <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-storage.js"></script>
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="description" content="Easily share files by generating download links" />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/aa3aeafa8a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
-        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"
-        integrity="sha384-ujbKXb9V3HdK7jcWL6kHL1c+2Lj4MR4Gkjl7UtwpSHg/ClpViddK9TI7yU53frPN"
-        crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/aa3aeafa8a.js" crossorigin="anonymous"></script>
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+            integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+            crossorigin="anonymous"
+        />
+        <script
+            defer
+            src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"
+            integrity="sha384-ujbKXb9V3HdK7jcWL6kHL1c+2Lj4MR4Gkjl7UtwpSHg/ClpViddK9TI7yU53frPN"
+            crossorigin="anonymous"
+        ></script>
 
-    <title>Share Easy!</title>
-    <style>
-        body {
-            background-color: black;
-        }
-    </style>
-</head>
+        <title>Share Easy!</title>
+        <style>
+            body {
+                background-color: black;
+            }
+        </style>
+    </head>
 
-<body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-</body>
-
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+    </body>
 </html>

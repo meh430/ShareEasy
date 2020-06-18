@@ -43,7 +43,7 @@ export class UploadComponent extends React.Component {
         if (selectedFile && !this.state.uploadRunning) {
             let fName = selectedFile["name"];
             fName = fName.replace(/\s/g, "");
-            uploadTask = storageRef.child("uploads/" + fName).put(selectedFile);
+            uploadTask = storageRef.child(fName).put(selectedFile);
             this.setState({ fileName: fName, fileType: selectedFile.type });
             uploadTask.on(
                 "state_changed",
