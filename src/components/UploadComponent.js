@@ -3,9 +3,13 @@ import "../App.css";
 import firebase from "../Firebase";
 import { UploadItem } from "./UploadItem";
 import { shortenReqHeaders } from "../Credentials";
-
+const SAVED_LINKS = 'SAVED_LINKS'
 const storageRef = firebase.storage().ref();
 let uploadTask;
+let uploads = JSON.parse(localStorage.getItem(SAVED_LINKS))
+uploads = uploads ? uploads : []
+
+//link item: {fileName, fileType, link}
 
 export class UploadComponent extends React.Component {
     constructor(props) {
@@ -25,8 +29,10 @@ export class UploadComponent extends React.Component {
     }
 
     uploadClicked(event) {
-        this.setState({ fileName: "", downloadLink: "", fileType: "", uploadRunning: false, progress: 0 });
-        this.refs.fileUpload.click();
+        if (!this.state.uploadRunning) {
+            this.setState({ fileName: "", downloadLink: "", fileType: "", uploadRunning: false, progress: 0 });
+            this.refs.fileUpload.click();
+        }
     }
 
     //TODO: handle errors
@@ -71,6 +77,9 @@ export class UploadComponent extends React.Component {
                                     fileName: fName,
                                     fileType: selectedFile.type,
                                 });
+
+                                uploads.push({ fileName: fName, fileType: selectedFile.type, dLink: link.shortUrl });
+                                localStorage.setItem(SAVED_LINKS, JSON.stringify(uploads));
                             });
                     });
                 }
@@ -81,6 +90,7 @@ export class UploadComponent extends React.Component {
     }
 
     render() {
+        //TODO: figure out expiration countdown and auto deletion
         return (
             <div className="section">
                 <h3 className="sectionInfo">
@@ -102,7 +112,7 @@ export class UploadComponent extends React.Component {
                     <UploadItem
                         fileType={this.state.fileType}
                         fileName={this.state.fileName}
-                        expireTime="12 hrs"
+                        expireTime="24 hrs"
                         downloadLink={this.state.downloadLink}
                     />
                 ) : (

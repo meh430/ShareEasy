@@ -5,7 +5,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 const iconStyle = {
     fontSize: "52px",
     color: "red",
-    margin: "10px",
+    margin: "14px",
 };
 const mediaIcons = {
     image: "fas fa-file-image",
@@ -30,7 +30,6 @@ export class UploadItem extends React.Component {
     }
 
     displayMediaIcon() {
-        console.log(this.props.fileName.length);
         if (this.props.fileName.length === 0) {
             return mediaIcons.upload;
         } else {
@@ -73,10 +72,13 @@ export class UploadItem extends React.Component {
     render() {
         return (
             <div className="upItem">
-                <i className={this.displayMediaIcon().toString()} style={iconStyle} />
-                <h3 className="fileName">
-                    {this.props.fileName.length === 0 ? "Please upload a file..." : this.props.fileName}
-                </h3>
+                <div className="upItemText">
+                    <i className={this.displayMediaIcon().toString()} style={iconStyle} />
+                    <h3 className="fileName">
+                        {this.props.fileName.length === 0 ? "Please upload a file..." : this.props.fileName}
+                    </h3>
+                </div>
+
                 {this.displayLink()}
             </div>
         );
