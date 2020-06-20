@@ -80,6 +80,8 @@ export class UploadItem extends React.Component {
                 </div>
 
                 {this.displayLink()}
+
+                {this.props.expireTime ? <h3 className="fileName">{"Expires in " + this.props.expireTime + " hrs"}</h3> : <div></div>}
             </div>
         );
     }

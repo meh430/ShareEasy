@@ -9,12 +9,22 @@ const createListItems = (uploadList) => {
     let ret = [];
     for (let i = 0; i < uploadList.length; i++) {
         const currLink = uploadList[i]
+        let elapsedTime = Math.floor((Date.now() - currLink.genDate) / (60 * 60 * 1000));
+        if (elapsedTime >= 12) {
+            continue;
+        }
+
+        let expiresIn = 12 - elapsedTime;
+        if (expiresIn === 0) {
+            expiresIn = "<1";
+        }
+
         ret.push(
-            <li style={{display: "inline-block"}}>
+            <li style={{display: "inline-block"}} key={`link_${i}`}>
                 <UploadItem
                     fileType={currLink.fileType}
                     fileName={currLink.fileName}
-                    expireTime="24 hrs"
+                    expireTime={expiresIn}
                     downloadLink={currLink.dLink}
                 />
             </li>

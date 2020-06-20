@@ -9,7 +9,7 @@ let uploadTask;
 let uploads = JSON.parse(localStorage.getItem(SAVED_LINKS))
 uploads = uploads ? uploads : []
 
-//link item: {fileName, fileType, link}
+//link item: {fileName, fileType, link, generationDate}
 
 export class UploadComponent extends React.Component {
     constructor(props) {
@@ -43,7 +43,7 @@ export class UploadComponent extends React.Component {
         if (selectedFile && !this.state.uploadRunning) {
             let fName = selectedFile["name"];
             fName = fName.replace(/\s/g, "");
-            uploadTask = storageRef.child(fName).put(selectedFile);
+            uploadTask = storageRef.child(fName).put(selectedFile, {timeCreated: Date.now()});
             this.setState({ fileName: fName, fileType: selectedFile.type });
             uploadTask.on(
                 "state_changed",
@@ -78,7 +78,13 @@ export class UploadComponent extends React.Component {
                                     fileType: selectedFile.type,
                                 });
 
-                                uploads.push({ fileName: fName, fileType: selectedFile.type, dLink: link.shortUrl });
+                                uploads.push({
+                                    fileName: fName,
+                                    fileType: selectedFile.type,
+                                    dLink: link.shortUrl,
+                                    genDate: Date.now()
+                                });
+
                                 localStorage.setItem(SAVED_LINKS, JSON.stringify(uploads));
                             });
                     });
@@ -112,7 +118,6 @@ export class UploadComponent extends React.Component {
                     <UploadItem
                         fileType={this.state.fileType}
                         fileName={this.state.fileName}
-                        expireTime="24 hrs"
                         downloadLink={this.state.downloadLink}
                     />
                 ) : (
