@@ -24,6 +24,7 @@
     color: white;
     font-size: 24px;
     width: 100%;
+    word-break: keep-all;
 }
 
 .section {
@@ -84,6 +85,20 @@
     border-radius: 10px;
     font-size: 14px;
     border: solid 2px #3e527a
+}
+
+.deleteItems {
+    cursor: pointer;
+    text-align: center;
+    color: black;
+    background-color: #f0a5a5;
+    font-family: 'Open Sans', sans-serif;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: solid 2px #7a3e3e;
+    width: fit-content;
 }
 
 .uploadButton {

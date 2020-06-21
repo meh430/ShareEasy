@@ -96,12 +96,11 @@ export class UploadComponent extends React.Component {
     }
 
     render() {
-        //TODO: figure out expiration countdown and auto deletion
         return (
             <div className="section">
                 <h3 className="sectionInfo">
-                    Upload a file to generate a download link that can easily be shared with others. Files that are
-                    uploaded stay available to download for 24 hours.
+                    Upload a file to generate a download link that can easily be shared. Files that are
+                    uploaded stay available to download for 12 hours.
                 </h3>
                 <a onClick={this.uploadClicked} className="uploadButton" style={{ color: "white" }}>
                     Upload File

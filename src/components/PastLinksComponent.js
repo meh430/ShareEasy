@@ -7,8 +7,9 @@ uploads = uploads ? uploads : [];
 
 const createListItems = (uploadList) => {
     let ret = [];
+
     for (let i = 0; i < uploadList.length; i++) {
-        const currLink = uploadList[i]
+        const currLink = uploadList[i];
         let elapsedTime = Math.floor((Date.now() - currLink.genDate) / (60 * 60 * 1000));
         if (elapsedTime >= 12) {
             continue;
@@ -20,7 +21,7 @@ const createListItems = (uploadList) => {
         }
 
         ret.push(
-            <li style={{display: "inline-block"}} key={`link_${i}`}>
+            <li style={{ display: "inline-block" }} key={`link_${i}`}>
                 <UploadItem
                     fileType={currLink.fileType}
                     fileName={currLink.fileName}
@@ -31,31 +32,62 @@ const createListItems = (uploadList) => {
         );
     }
 
-    return ret.length > 0 ? ret : [<li><h3 className="fileName">No Uploads...</h3></li>];
+    return ret.length > 0
+        ? ret
+        : [
+              <li key="no_items">
+                  <h3 className="fileName">No Uploads...</h3>
+              </li>,
+          ];
 };
 
 export class PastLinksComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = { pastLinks: createListItems(uploads) };
-        this.updateList = this.updateList.bind(this)
+        this.updateList = this.updateList.bind(this);
+        this.deleteLinks = this.deleteLinks.bind(this);
         setInterval(this.updateList, 1000);
-        console.log(uploads)
+        console.log(uploads);
+    }
+    
+    //TODO: figure out why this is not working
+    deleteLinks() {
+        localStorage.setItem("SAVED_LINKS", "[]");
+        localStorage.removeItem("SAVED_LINKS");
+        localStorage.clear();
+        this.setState({ pastLinks: [] });
     }
 
     updateList() {
         uploads = JSON.parse(localStorage.getItem("SAVED_LINKS"));
         uploads = uploads ? uploads : [];
-        this.setState({pastLinks: createListItems(uploads)})
+        this.setState({ pastLinks: createListItems(uploads) });
     }
 
     render() {
         return (
             <div className="section">
                 <h3 className="sectionInfo">Generated download links</h3>
-                <ul className="pastUploads">
-                    {this.state.pastLinks}
-                </ul>
+                {this.state.pastLinks.length > 0 ? (
+                    <div className="deleteItems" onClick={this.deleteLinks}>
+                        Delete Links{" "}
+                        <div
+                            style={{
+                                display: "inline-block",
+                                padding: "8px",
+                                paddingLeft: "12px",
+                                marginLeft: "12px",
+                                fontSize: "16px",
+                            }}
+                        >
+                            <i className="fas fa-trash" style={{ cursor: "pointer" }} onClick={this.deleteLinks}></i>
+                        </div>
+                    </div>
+                ) : (
+                    <div></div>
+                )}
+                <ul className="pastUploads">{this.state.pastLinks}</ul>
             </div>
         );
     }
