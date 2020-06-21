@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ShareEasy/static/css/main.c751c118.chunk.css",
-    "main.js": "/ShareEasy/static/js/main.b5cf6ba0.chunk.js",
-    "main.js.map": "/ShareEasy/static/js/main.b5cf6ba0.chunk.js.map",
+    "main.js": "/ShareEasy/static/js/main.c5967b7b.chunk.js",
+    "main.js.map": "/ShareEasy/static/js/main.c5967b7b.chunk.js.map",
     "runtime-main.js": "/ShareEasy/static/js/runtime-main.9cb961d3.js",
     "runtime-main.js.map": "/ShareEasy/static/js/runtime-main.9cb961d3.js.map",
     "static/js/2.4d073587.chunk.js": "/ShareEasy/static/js/2.4d073587.chunk.js",
     "static/js/2.4d073587.chunk.js.map": "/ShareEasy/static/js/2.4d073587.chunk.js.map",
     "index.html": "/ShareEasy/index.html",
-    "precache-manifest.91bf7bd9428b92d9275d41df7985d10a.js": "/ShareEasy/precache-manifest.91bf7bd9428b92d9275d41df7985d10a.js",
+    "precache-manifest.4554603a822745cda49129f72829e59e.js": "/ShareEasy/precache-manifest.4554603a822745cda49129f72829e59e.js",
     "service-worker.js": "/ShareEasy/service-worker.js",
     "static/css/main.c751c118.chunk.css.map": "/ShareEasy/static/css/main.c751c118.chunk.css.map",
     "static/js/2.4d073587.chunk.js.LICENSE.txt": "/ShareEasy/static/js/2.4d073587.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.9cb961d3.js",
     "static/js/2.4d073587.chunk.js",
     "static/css/main.c751c118.chunk.css",
-    "static/js/main.b5cf6ba0.chunk.js"
+    "static/js/main.c5967b7b.chunk.js"
   ]
 }
