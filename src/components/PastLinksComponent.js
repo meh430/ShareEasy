@@ -32,13 +32,7 @@ const createListItems = (uploadList) => {
         );
     }
 
-    return ret.length > 0
-        ? ret
-        : [
-              <li key="no_items">
-                  <h3 className="fileName">No Uploads...</h3>
-              </li>,
-          ];
+    return ret;
 };
 
 export class PastLinksComponent extends React.Component {
@@ -50,13 +44,15 @@ export class PastLinksComponent extends React.Component {
         setInterval(this.updateList, 1000);
         console.log(uploads);
     }
-    
+
     //TODO: figure out why this is not working
     deleteLinks() {
         localStorage.setItem("SAVED_LINKS", "[]");
         localStorage.removeItem("SAVED_LINKS");
         localStorage.clear();
-        this.setState({ pastLinks: [] });
+        this.setState({
+            pastLinks: []
+        });
     }
 
     updateList() {
@@ -87,7 +83,12 @@ export class PastLinksComponent extends React.Component {
                 ) : (
                     <div></div>
                 )}
-                <ul className="pastUploads">{this.state.pastLinks}</ul>
+
+                {this.state.pastLinks.length > 0 ? (
+                    <ul className="pastUploads">{this.state.pastLinks}</ul>
+                ) : (
+                    <h3 className="fileName">No Uploads...</h3>
+                )}
             </div>
         );
     }
