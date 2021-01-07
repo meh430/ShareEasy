@@ -1,5 +1,5 @@
 # ShareEasy
-https://github.com/meh430/ShareEasy/workflows/CI/CD/badge.svg
+![CI/CD](https://github.com/meh430/ShareEasy/workflows/CI/CD/badge.svg)
 
 [ShareEasy](https://meh430.github.io/ShareEasy/) is a react app that allows users to quickly and easily share fairly large files.
 
