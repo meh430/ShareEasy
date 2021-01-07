@@ -36,7 +36,7 @@ export class UploadItem extends React.Component {
     }
 
     displayMediaIcon() {
-        if (this.props.fileName.length === 0) {
+        if (this.props.fileName.length === 0 || this.props.fileType.length === 0) {
             return mediaIcons.upload;
         } else {
             const mediaKeys = Object.keys(mediaIcons);

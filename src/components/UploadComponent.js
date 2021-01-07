@@ -8,7 +8,6 @@ const storageRef = firebase.storage().ref();
 let uploadTask;
 
 //link item: {fileName, fileType, link, generationDate}
-
 export class UploadComponent extends React.Component {
     constructor(props) {
         super(props);

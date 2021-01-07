@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should test PastLinksComponent 1`] = `
+<div
+  className="section"
+>
+  <h3
+    className="sectionInfo"
+  >
+    Generated download links
+  </h3>
+  <div />
+  <h3
+    className="fileName"
+  >
+    No Uploads...
+  </h3>
+</div>
+`;

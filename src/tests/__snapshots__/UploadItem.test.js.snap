@@ -1,5 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should test all no file type Upload Item components 1`] = `
+<div
+  className="upItem"
+>
+  <div
+    className="upItemText"
+  >
+    <i
+      className="fas fa-upload"
+      style={
+        Object {
+          "color": "red",
+          "fontSize": "52px",
+          "margin": "14px",
+        }
+      }
+    />
+    <h3
+      className="fileName"
+    >
+      file name
+    </h3>
+  </div>
+  <div
+    className="dLink"
+    style={
+      Object {
+        "backgroundColor": "#a5bef0",
+      }
+    }
+  >
+    link
+     
+    <CopyToClipboard
+      text="link"
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "borderLeft": "solid 1px black",
+            "display": "inline-block",
+            "fontSize": "16px",
+            "marginLeft": "12px",
+            "padding": "8px",
+            "paddingLeft": "12px",
+          }
+        }
+      >
+        <i
+          className="far fa-clone"
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+    </CopyToClipboard>
+  </div>
+  <div />
+</div>
+`;
+
 exports[`should test all possible Upload Item components finished 1`] = `
 <div
   className="upItem"
