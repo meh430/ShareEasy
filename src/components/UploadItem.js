@@ -16,6 +16,12 @@ const mediaIcons = {
     zip: "far fa-file-archive",
     upload: "fas fa-upload",
 };
+
+
+//fileName: string
+//fileType: string
+//downloadLink: string
+//expireTime: optional string
 export class UploadItem extends React.Component {
     constructor(props) {
         super(props);
@@ -45,7 +51,7 @@ export class UploadItem extends React.Component {
     }
 
     displayLink() {
-        if (!this.props.running && this.props.downloadLink.length !== 0) {
+        if (this.props.downloadLink.length !== 0) {
             return (
                 <div className="dLink" style={{ backgroundColor: this.state.copyState }}>
                     {this.props.downloadLink}{" "}

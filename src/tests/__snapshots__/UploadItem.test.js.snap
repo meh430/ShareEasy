@@ -1,0 +1,645 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should test all possible Upload Item components finished 1`] = `
+<div
+  className="upItem"
+>
+  <div
+    className="upItemText"
+  >
+    <i
+      className="fas fa-file-image"
+      style={
+        Object {
+          "color": "red",
+          "fontSize": "52px",
+          "margin": "14px",
+        }
+      }
+    />
+    <h3
+      className="fileName"
+    >
+      file name
+    </h3>
+  </div>
+  <div
+    className="dLink"
+    style={
+      Object {
+        "backgroundColor": "#a5bef0",
+      }
+    }
+  >
+    link
+     
+    <CopyToClipboard
+      text="link"
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "borderLeft": "solid 1px black",
+            "display": "inline-block",
+            "fontSize": "16px",
+            "marginLeft": "12px",
+            "padding": "8px",
+            "paddingLeft": "12px",
+          }
+        }
+      >
+        <i
+          className="far fa-clone"
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+    </CopyToClipboard>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`should test all possible Upload Item components finished 2`] = `
+<div
+  className="upItem"
+>
+  <div
+    className="upItemText"
+  >
+    <i
+      className="far fa-file-video"
+      style={
+        Object {
+          "color": "red",
+          "fontSize": "52px",
+          "margin": "14px",
+        }
+      }
+    />
+    <h3
+      className="fileName"
+    >
+      file name
+    </h3>
+  </div>
+  <div
+    className="dLink"
+    style={
+      Object {
+        "backgroundColor": "#a5bef0",
+      }
+    }
+  >
+    link
+     
+    <CopyToClipboard
+      text="link"
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "borderLeft": "solid 1px black",
+            "display": "inline-block",
+            "fontSize": "16px",
+            "marginLeft": "12px",
+            "padding": "8px",
+            "paddingLeft": "12px",
+          }
+        }
+      >
+        <i
+          className="far fa-clone"
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+    </CopyToClipboard>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`should test all possible Upload Item components finished 3`] = `
+<div
+  className="upItem"
+>
+  <div
+    className="upItemText"
+  >
+    <i
+      className="far fa-file-audio"
+      style={
+        Object {
+          "color": "red",
+          "fontSize": "52px",
+          "margin": "14px",
+        }
+      }
+    />
+    <h3
+      className="fileName"
+    >
+      file name
+    </h3>
+  </div>
+  <div
+    className="dLink"
+    style={
+      Object {
+        "backgroundColor": "#a5bef0",
+      }
+    }
+  >
+    link
+     
+    <CopyToClipboard
+      text="link"
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "borderLeft": "solid 1px black",
+            "display": "inline-block",
+            "fontSize": "16px",
+            "marginLeft": "12px",
+            "padding": "8px",
+            "paddingLeft": "12px",
+          }
+        }
+      >
+        <i
+          className="far fa-clone"
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+    </CopyToClipboard>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`should test all possible Upload Item components finished 4`] = `
+<div
+  className="upItem"
+>
+  <div
+    className="upItemText"
+  >
+    <i
+      className="far fa-file-pdf"
+      style={
+        Object {
+          "color": "red",
+          "fontSize": "52px",
+          "margin": "14px",
+        }
+      }
+    />
+    <h3
+      className="fileName"
+    >
+      file name
+    </h3>
+  </div>
+  <div
+    className="dLink"
+    style={
+      Object {
+        "backgroundColor": "#a5bef0",
+      }
+    }
+  >
+    link
+     
+    <CopyToClipboard
+      text="link"
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "borderLeft": "solid 1px black",
+            "display": "inline-block",
+            "fontSize": "16px",
+            "marginLeft": "12px",
+            "padding": "8px",
+            "paddingLeft": "12px",
+          }
+        }
+      >
+        <i
+          className="far fa-clone"
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+    </CopyToClipboard>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`should test all possible Upload Item components finished 5`] = `
+<div
+  className="upItem"
+>
+  <div
+    className="upItemText"
+  >
+    <i
+      className="far fa-file-alt"
+      style={
+        Object {
+          "color": "red",
+          "fontSize": "52px",
+          "margin": "14px",
+        }
+      }
+    />
+    <h3
+      className="fileName"
+    >
+      file name
+    </h3>
+  </div>
+  <div
+    className="dLink"
+    style={
+      Object {
+        "backgroundColor": "#a5bef0",
+      }
+    }
+  >
+    link
+     
+    <CopyToClipboard
+      text="link"
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "borderLeft": "solid 1px black",
+            "display": "inline-block",
+            "fontSize": "16px",
+            "marginLeft": "12px",
+            "padding": "8px",
+            "paddingLeft": "12px",
+          }
+        }
+      >
+        <i
+          className="far fa-clone"
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+    </CopyToClipboard>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`should test all possible Upload Item components finished 6`] = `
+<div
+  className="upItem"
+>
+  <div
+    className="upItemText"
+  >
+    <i
+      className="far fa-file-archive"
+      style={
+        Object {
+          "color": "red",
+          "fontSize": "52px",
+          "margin": "14px",
+        }
+      }
+    />
+    <h3
+      className="fileName"
+    >
+      file name
+    </h3>
+  </div>
+  <div
+    className="dLink"
+    style={
+      Object {
+        "backgroundColor": "#a5bef0",
+      }
+    }
+  >
+    link
+     
+    <CopyToClipboard
+      text="link"
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "borderLeft": "solid 1px black",
+            "display": "inline-block",
+            "fontSize": "16px",
+            "marginLeft": "12px",
+            "padding": "8px",
+            "paddingLeft": "12px",
+          }
+        }
+      >
+        <i
+          className="far fa-clone"
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+    </CopyToClipboard>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`should test all possible Upload Item components finished 7`] = `
+<div
+  className="upItem"
+>
+  <div
+    className="upItemText"
+  >
+    <i
+      className="fas fa-upload"
+      style={
+        Object {
+          "color": "red",
+          "fontSize": "52px",
+          "margin": "14px",
+        }
+      }
+    />
+    <h3
+      className="fileName"
+    >
+      file name
+    </h3>
+  </div>
+  <div
+    className="dLink"
+    style={
+      Object {
+        "backgroundColor": "#a5bef0",
+      }
+    }
+  >
+    link
+     
+    <CopyToClipboard
+      text="link"
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "borderLeft": "solid 1px black",
+            "display": "inline-block",
+            "fontSize": "16px",
+            "marginLeft": "12px",
+            "padding": "8px",
+            "paddingLeft": "12px",
+          }
+        }
+      >
+        <i
+          className="far fa-clone"
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+        />
+      </div>
+    </CopyToClipboard>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`should test all possible Upload Item components in progress 1`] = `
+<div
+  className="upItem"
+>
+  <div
+    className="upItemText"
+  >
+    <i
+      className="fas fa-file-image"
+      style={
+        Object {
+          "color": "red",
+          "fontSize": "52px",
+          "margin": "14px",
+        }
+      }
+    />
+    <h3
+      className="fileName"
+    >
+      file name
+    </h3>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`should test all possible Upload Item components in progress 2`] = `
+<div
+  className="upItem"
+>
+  <div
+    className="upItemText"
+  >
+    <i
+      className="far fa-file-video"
+      style={
+        Object {
+          "color": "red",
+          "fontSize": "52px",
+          "margin": "14px",
+        }
+      }
+    />
+    <h3
+      className="fileName"
+    >
+      file name
+    </h3>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`should test all possible Upload Item components in progress 3`] = `
+<div
+  className="upItem"
+>
+  <div
+    className="upItemText"
+  >
+    <i
+      className="far fa-file-audio"
+      style={
+        Object {
+          "color": "red",
+          "fontSize": "52px",
+          "margin": "14px",
+        }
+      }
+    />
+    <h3
+      className="fileName"
+    >
+      file name
+    </h3>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`should test all possible Upload Item components in progress 4`] = `
+<div
+  className="upItem"
+>
+  <div
+    className="upItemText"
+  >
+    <i
+      className="far fa-file-pdf"
+      style={
+        Object {
+          "color": "red",
+          "fontSize": "52px",
+          "margin": "14px",
+        }
+      }
+    />
+    <h3
+      className="fileName"
+    >
+      file name
+    </h3>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`should test all possible Upload Item components in progress 5`] = `
+<div
+  className="upItem"
+>
+  <div
+    className="upItemText"
+  >
+    <i
+      className="far fa-file-alt"
+      style={
+        Object {
+          "color": "red",
+          "fontSize": "52px",
+          "margin": "14px",
+        }
+      }
+    />
+    <h3
+      className="fileName"
+    >
+      file name
+    </h3>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`should test all possible Upload Item components in progress 6`] = `
+<div
+  className="upItem"
+>
+  <div
+    className="upItemText"
+  >
+    <i
+      className="far fa-file-archive"
+      style={
+        Object {
+          "color": "red",
+          "fontSize": "52px",
+          "margin": "14px",
+        }
+      }
+    />
+    <h3
+      className="fileName"
+    >
+      file name
+    </h3>
+  </div>
+  <div />
+</div>
+`;
+
+exports[`should test all possible Upload Item components in progress 7`] = `
+<div
+  className="upItem"
+>
+  <div
+    className="upItemText"
+  >
+    <i
+      className="fas fa-upload"
+      style={
+        Object {
+          "color": "red",
+          "fontSize": "52px",
+          "margin": "14px",
+        }
+      }
+    />
+    <h3
+      className="fileName"
+    >
+      file name
+    </h3>
+  </div>
+  <div />
+</div>
+`;

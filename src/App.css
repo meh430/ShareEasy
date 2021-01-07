@@ -102,6 +102,7 @@
 }
 
 .uploadButton {
+    border: 2px solid black;
     text-align: center;
     margin: 10px;
 	background-color:#3f7efc;

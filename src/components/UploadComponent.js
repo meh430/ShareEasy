@@ -3,7 +3,7 @@ import "../App.css";
 import firebase from "../Firebase";
 import { UploadItem } from "./UploadItem";
 import { shortenReqHeaders } from "../Credentials";
-const SAVED_LINKS = 'SAVED_LINKS'
+const SAVED_LINKS = "SAVED_LINKS";
 const storageRef = firebase.storage().ref();
 let uploadTask;
 
@@ -33,7 +33,6 @@ export class UploadComponent extends React.Component {
         }
     }
 
-    //TODO: handle errors
     onFileSelected(event) {
         event.stopPropagation();
         event.preventDefault();
@@ -41,7 +40,7 @@ export class UploadComponent extends React.Component {
         if (selectedFile && !this.state.uploadRunning) {
             let fName = selectedFile["name"];
             fName = fName.replace(/\s/g, "");
-            uploadTask = storageRef.child(fName).put(selectedFile, {timeCreated: Date.now()});
+            uploadTask = storageRef.child(fName).put(selectedFile, { timeCreated: Date.now() });
             this.setState({ fileName: fName, fileType: selectedFile.type });
             uploadTask.on(
                 "state_changed",
@@ -76,14 +75,14 @@ export class UploadComponent extends React.Component {
                                     fileType: selectedFile.type,
                                 });
 
-                                let uploads = JSON.parse(localStorage.getItem(SAVED_LINKS))
-                                uploads = uploads ? uploads : []
+                                let uploads = JSON.parse(localStorage.getItem(SAVED_LINKS));
+                                uploads = uploads ? uploads : [];
 
                                 uploads.push({
                                     fileName: fName,
                                     fileType: selectedFile.type,
                                     dLink: link.shortUrl,
-                                    genDate: Date.now()
+                                    genDate: Date.now(),
                                 });
 
                                 localStorage.setItem(SAVED_LINKS, JSON.stringify(uploads));
@@ -100,12 +99,12 @@ export class UploadComponent extends React.Component {
         return (
             <div className="section">
                 <h3 className="sectionInfo">
-                    Upload a file to generate a download link that can easily be shared. Files that are
-                    uploaded stay available to download for 12 hours.
+                    Upload a file to generate a download link that can easily be shared. Files that are uploaded stay
+                    available to download for 12 hours.
                 </h3>
-                <a onClick={this.uploadClicked} className="uploadButton" style={{ color: "white" }}>
+                <button onClick={this.uploadClicked} className="uploadButton" style={{ color: "white" }}>
                     Upload File
-                </a>
+                </button>
                 <input
                     type="file"
                     id="file"
