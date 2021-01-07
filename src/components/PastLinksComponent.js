@@ -2,10 +2,12 @@ import React from "react";
 import "../App.css";
 import { UploadItem } from "./UploadItem";
 
-let uploads = JSON.parse(localStorage.getItem("SAVED_LINKS"));
-uploads = uploads ? uploads : [];
 
 const createListItems = (uploadList) => {
+    if (!uploadList) {
+        return;
+    }
+
     let ret = [];
 
     for (let i = 0; i < uploadList.length; i++) {
@@ -38,11 +40,11 @@ const createListItems = (uploadList) => {
 export class PastLinksComponent extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { pastLinks: createListItems(uploads) };
+        const uploads = JSON.parse(localStorage.getItem("SAVED_LINKS"));
+        this.state = { pastLinks: createListItems(uploads ? uploads : []) };
         this.updateList = this.updateList.bind(this);
         this.deleteLinks = this.deleteLinks.bind(this);
         setInterval(this.updateList, 1000);
-        console.log(uploads);
     }
 
     //TODO: figure out why this is not working
@@ -56,7 +58,8 @@ export class PastLinksComponent extends React.Component {
     }
 
     updateList() {
-        uploads = JSON.parse(localStorage.getItem("SAVED_LINKS"));
+        let uploads = JSON.parse(localStorage.getItem("SAVED_LINKS"));
+        console.log(uploads);
         uploads = uploads ? uploads : [];
         this.setState({ pastLinks: createListItems(uploads) });
     }

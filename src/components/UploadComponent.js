@@ -6,8 +6,6 @@ import { shortenReqHeaders } from "../Credentials";
 const SAVED_LINKS = 'SAVED_LINKS'
 const storageRef = firebase.storage().ref();
 let uploadTask;
-let uploads = JSON.parse(localStorage.getItem(SAVED_LINKS))
-uploads = uploads ? uploads : []
 
 //link item: {fileName, fileType, link, generationDate}
 
@@ -77,6 +75,9 @@ export class UploadComponent extends React.Component {
                                     fileName: fName,
                                     fileType: selectedFile.type,
                                 });
+
+                                let uploads = JSON.parse(localStorage.getItem(SAVED_LINKS))
+                                uploads = uploads ? uploads : []
 
                                 uploads.push({
                                     fileName: fName,
