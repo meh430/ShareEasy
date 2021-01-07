@@ -3,7 +3,7 @@ const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 admin.initializeApp();
 
-//can't use scheduled functions because you have to pay. I guess listening to the storage bucket will have to do for now
+// can't use scheduled functions because you have to pay. I guess listening to the storage bucket will have to do for now
 exports.clearStorage = functions.storage.object().onFinalize(object => { 
     const storageRef = admin.storage().bucket("gs://shareeasy-dd2ce.appspot.com");
     storageRef.getFiles((err, files) => {
@@ -14,7 +14,7 @@ exports.clearStorage = functions.storage.object().onFinalize(object => {
                     if (timeElapsed >= (12 * 60 * 60 * 1000 )) {
                         files[i].delete((err, apiResponse) => { 
                             if (err) {
-                                const add = 5 + 5
+                                console.log(err);
                             }
                         })
                     }
