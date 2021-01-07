@@ -27,6 +27,9 @@ jobs:
 
     - name: Build
       run: npm run build
+      env: 
+        REACT_APP_FIREAPI: ${{ secrets.REACT_APP_FIREAPI }}
+        REACT_APP_LINKAPI: ${{ secrets.REACT_APP_LINKAPI }} 
 
     - name: Deploy
       run: |
