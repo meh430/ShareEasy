@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/ShareEasy/static/css/main.8cb48342.chunk.css",
-    "main.js": "/ShareEasy/static/js/main.a205f822.chunk.js",
-    "main.js.map": "/ShareEasy/static/js/main.a205f822.chunk.js.map",
+    "main.js": "/ShareEasy/static/js/main.248a69b0.chunk.js",
+    "main.js.map": "/ShareEasy/static/js/main.248a69b0.chunk.js.map",
     "runtime-main.js": "/ShareEasy/static/js/runtime-main.93e62cdd.js",
     "runtime-main.js.map": "/ShareEasy/static/js/runtime-main.93e62cdd.js.map",
-    "static/js/2.34fadda2.chunk.js": "/ShareEasy/static/js/2.34fadda2.chunk.js",
-    "static/js/2.34fadda2.chunk.js.map": "/ShareEasy/static/js/2.34fadda2.chunk.js.map",
+    "static/js/2.d1db8176.chunk.js": "/ShareEasy/static/js/2.d1db8176.chunk.js",
+    "static/js/2.d1db8176.chunk.js.map": "/ShareEasy/static/js/2.d1db8176.chunk.js.map",
     "index.html": "/ShareEasy/index.html",
     "static/css/main.8cb48342.chunk.css.map": "/ShareEasy/static/css/main.8cb48342.chunk.css.map",
-    "static/js/2.34fadda2.chunk.js.LICENSE.txt": "/ShareEasy/static/js/2.34fadda2.chunk.js.LICENSE.txt"
+    "static/js/2.d1db8176.chunk.js.LICENSE.txt": "/ShareEasy/static/js/2.d1db8176.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.93e62cdd.js",
-    "static/js/2.34fadda2.chunk.js",
+    "static/js/2.d1db8176.chunk.js",
     "static/css/main.8cb48342.chunk.css",
-    "static/js/main.a205f822.chunk.js"
+    "static/js/main.248a69b0.chunk.js"
   ]
 }
