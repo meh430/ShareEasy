@@ -1,4 +1,3 @@
-// Your web app's Firebase configuration
 import firebase from 'firebase'
 
 const firebaseConfig = {
