@@ -1,7 +1,9 @@
 import firebase from "firebase";
 
+const key = process.env.REACT_APP_FIREAPI;
+console.log(key.length);
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREAPI,
+  apiKey: key,
   authDomain: "shareeasy-dd2ce.firebaseapp.com",
   databaseURL: "https://shareeasy-dd2ce.firebaseio.com",
   projectId: "shareeasy-dd2ce",
